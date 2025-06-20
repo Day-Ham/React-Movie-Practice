@@ -9,12 +9,20 @@ function App() {
         Hello World!
       </p>
     </div>
+    <Text display="Hello"/>
+    <Text display=" "/>
+    <Text display="Dae "/>
+    <Text display="Han "/>
+    </>
+  )
+}
+function Text({display}){
+  return(
     <div>
       <p>
-        Hello World!
+        {display}
       </p>
     </div>
-    </>
   )
 }
 
