@@ -1,26 +1,24 @@
-import './App.css'
+import './css/App.css'
 import MovieCard from './components/MovieCard'
+import Favorites from './Pages/Favorites'
+import Home from './Pages/Home'
+import { Routes,Route } from 'react-router-dom'
+import NavBar from './components/NavBar'
 function App() {
  
   return (
-    <>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-      <MovieCard movie={{title:"Tim's Fishing Trip", release_date:'2024'}}/>
-    </>
-  )
-}
-function Text({display}){
-  return(
     <div>
-      <p>
-        {display}
-      </p>
+      <NavBar/>
+    <main className='main-content'>
+      
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/favorites' element={<Favorites/>}></Route>
+        </Routes>
+    </main>
     </div>
   )
 }
+
 
 export default App
